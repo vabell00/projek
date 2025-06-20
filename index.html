@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard LIMIT KOPI</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="max-w-md mx-auto p-4">
+    <h1 class="text-2xl font-bold text-center text-blue-800 mb-4">Dashboard LIMIT KOPI</h1>
+
+    <div class="space-y-6">
+      <!-- Menu -->
+      <section class="bg-white rounded-lg shadow-md p-4">
+        <h2 class="text-lg font-semibold mb-2 text-blue-700">📋 Menu</h2>
+        <div id="menu-list" class="text-sm space-y-1 text-gray-800">
+          <p>Loading menu...</p>
+        </div>
+      </section>
+
+      <!-- Penjualan -->
+      <section class="bg-white rounded-lg shadow-md p-4">
+        <h2 class="text-lg font-semibold mb-2 text-green-700">💸 Tambah Penjualan</h2>
+        <form id="penjualan-form" class="space-y-2">
+          <select id="menu-select" class="w-full p-2 border rounded">
+            <option>Pilih menu</option>
+          </select>
+          <input type="number" id="jumlah" placeholder="Jumlah" class="w-full p-2 border rounded" />
+          <button type="submit" class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">Tambah</button>
+        </form>
+      </section>
+
+      <!-- Pengeluaran -->
+      <section class="bg-white rounded-lg shadow-md p-4">
+        <h2 class="text-lg font-semibold mb-2 text-red-700">📤 Tambah Pengeluaran</h2>
+        <form id="pengeluaran-form" class="space-y-2">
+          <input type="text" id="item-pengeluaran" placeholder="Item" class="w-full p-2 border rounded" />
+          <input type="number" id="jumlah-pengeluaran" placeholder="Jumlah (Rp)" class="w-full p-2 border rounded" />
+          <button type="submit" class="w-full bg-red-600 text-white py-2 rounded hover:bg-red-700">Tambah</button>
+        </form>
+      </section>
+
+      <!-- Arus Kas -->
+      <section class="bg-white rounded-lg shadow-md p-4">
+        <h2 class="text-lg font-semibold mb-2 text-indigo-700">📊 Arus Kas Hari Ini</h2>
+        <div id="kas-info" class="text-sm text-gray-800 space-y-1">
+          <p>Pemasukan: <span id="pemasukan">Rp0</span></p>
+          <p>Pengeluaran: <span id="pengeluaran">Rp0</span></p>
+          <p class="font-bold">Saldo: <span id="saldo">Rp0</span></p>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
